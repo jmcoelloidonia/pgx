@@ -210,7 +210,7 @@ func (p *ConnPool) Release(conn *Conn) {
 	if conn.poolResetCount != p.resetCount {
 		conn.Close()
 		p.cond.L.Unlock()
-		p.cond.Signal()
+		p.cond.Broadcast()
 		return
 	}
 
@@ -220,7 +220,7 @@ func (p *ConnPool) Release(conn *Conn) {
 		p.removeFromAllConnections(conn)
 	}
 	p.cond.L.Unlock()
-	p.cond.Signal()
+	p.cond.Broadcast()
 }
 
 // removeFromAllConnections Removes the given connection from the list.
