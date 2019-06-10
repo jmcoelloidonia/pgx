@@ -3,7 +3,7 @@
 pgx provides lower level access to PostgreSQL than the standard database/sql.
 It remains as similar to the database/sql interface as possible while
 providing better speed and access to PostgreSQL specific features. Import
-github.com/jackc/pgx/stdlib to use pgx as a database/sql compatible driver.
+github.com/jmcoelloidonia/pgx/stdlib to use pgx as a database/sql compatible driver.
 
 Query Interface
 
@@ -149,7 +149,7 @@ Custom Type Support
 
 pgx includes support for the common data types like integers, floats, strings,
 dates, and times that have direct mappings between Go and SQL. In addition,
-pgx uses the github.com/jackc/pgx/pgtype library to support more types. See
+pgx uses the github.com/jmcoelloidonia/pgx/pgtype library to support more types. See
 documention for that library for instructions on how to implement custom
 types.
 
@@ -238,7 +238,7 @@ connection.
 
 pgx has never explicitly supported Postgres < 9.6's `ssl_renegotiation` option.
 As of v3.3.0, it doesn't send `ssl_renegotiation: 0` either to support Redshift
-(https://github.com/jackc/pgx/pull/476). If you need TLS Renegotiation,
+(https://github.com/jmcoelloidonia/pgx/pull/476). If you need TLS Renegotiation,
 consider supplying `ConnConfig.TLSConfig` with a non-zero `Renegotiation`
 value and if it's not the default on your server, set `ssl_renegotiation`
 via `ConnConfig.RuntimeParams`.

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jackc/pgx/pgio"
+	"github.com/jmcoelloidonia/pgx/pgio"
 	"github.com/pkg/errors"
 )
 

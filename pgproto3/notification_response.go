@@ -5,7 +5,7 @@ import (
 	"encoding/binary"
 	"encoding/json"
 
-	"github.com/jackc/pgx/pgio"
+	"github.com/jmcoelloidonia/pgx/pgio"
 )
 
 type NotificationResponse struct {

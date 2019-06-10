@@ -24,9 +24,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/jackc/pgx/pgio"
-	"github.com/jackc/pgx/pgproto3"
-	"github.com/jackc/pgx/pgtype"
+	"github.com/jmcoelloidonia/pgx/pgio"
+	"github.com/jmcoelloidonia/pgx/pgproto3"
+	"github.com/jmcoelloidonia/pgx/pgtype"
 )
 
 const (
@@ -585,7 +585,7 @@ func (c *Conn) crateDBTypesQuery(err error) (*pgtype.ConnInfo, error) {
 	//
 	// [1] https://crate.io/
 	// [2] https://github.com/crate/crate/issues/5027
-	// [3] https://github.com/jackc/pgx/issues/320
+	// [3] https://github.com/jmcoelloidonia/pgx/issues/320
 
 	if pgErr, ok := err.(PgError); ok &&
 		(pgErr.Code == "XX000" ||

@@ -3,7 +3,7 @@ package pgx
 import (
 	"io"
 
-	"github.com/jackc/pgx/pgproto3"
+	"github.com/jmcoelloidonia/pgx/pgproto3"
 )
 
 func (c *Conn) readUntilCopyOutResponse() error {

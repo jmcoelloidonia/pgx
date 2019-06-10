@@ -7,7 +7,7 @@ import (
 	"database/sql"
 	"database/sql/driver"
 
-	"github.com/jackc/pgx"
+	"github.com/jmcoelloidonia/pgx"
 )
 
 // OptionOpenDB options for configuring the driver when opening a new db pool.

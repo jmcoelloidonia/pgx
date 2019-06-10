@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/jackc/pgx/pgio"
+	"github.com/jmcoelloidonia/pgx/pgio"
 	"github.com/pkg/errors"
 )
 
